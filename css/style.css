@@ -1,12 +1,12 @@
 /* --- WOOD, EPOXY & GOLD PALETTE --- */
 :root {
-    --primary-blue: #003366;    /* 1. Duboka modra boja mora (Deep Sea Blue Epoxy) */
-    --wood-dark: #2b180a;       /* 2. Dosta tamnija, bogata nijansa drva */
+    --primary-blue: #003366;    /* Duboka modra boja mora (Deep Sea Blue Epoxy) */
+    --wood-dark: #201107;       /* Dosta tamnija, bogata nijansa drva */
     --accent-gold: #d4af37;     /* Izraženija zlatna za detalje */
-    --text-dark: #f5efe6;       /* Svijetli tekst jer je pozadina sada tamno drvo */
+    --text-dark: #f5efe6;       /* Svijetli tekst za izvrsnu čitljivost */
     --text-light: #ffffff;
     --transition: all 0.3s ease;
-    --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,114 +16,12 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     
-    /* 2. TAMNA PODLOGA S VJERNIJIM I IZRAZITIJIM UZORKOM DRVA */
+    /* GLAVNA PODLOGA S VJERNIM UZORKOM DRVA */
     background-color: var(--wood-dark);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cpath d='M0 20c40 0 60 10 100 10s60-10 100-10v5c-40 0-60 10-100 10S40 25 0 25zm0 40c40 0 40 15 100 15s60-15 100-15v5c-40 0-40 15-100 15S40 80 0 80zm0 40c50 0 50 20 100 20s50-20 100-20v5c-50 0-50 20-100 20S50 145 0 145zm0 40c30 0 70 12 100 12s70-12 100-12v5c-30 0-70 12-100 12S30 197 0 197z' fill='%23120a04' fill-opacity='0.4'/%3E%3Cpath d='M0 10c50 0 30 5 100 5s50-5 100-5v2c-50 0-30 5-100 5S50 12 0 12zm0 40c30 0 50 8 100 8s70-8 100-8v2c-30 0-50 8-100 8S30 52 0 52zm0 50c40 0 40 12 100 12s60-12 100-12v2c-40 0-40 12-100 12S40 114 0 114zm0 50c25 0 65 6 100 6s75-6 100-6v2c-25 0-65 6-100 6S35 164 0 164z' fill='%23000000' fill-opacity='0.25'/%3E%3C/svg%3E");
-}
-
-a { text-decoration: none; color: inherit; transition: var(--transition); }
-ul { list-style: none; }
-img { max-width: 100%; display: block; }
-
-/* --- NAVIGACIJA (MODRO KAO MORE) --- */
-header {
-    background: var(--primary-blue);
-    color: var(--text-light);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 4px 25px rgba(0,0,0,0.5);
-    border-bottom: 2px solid var(--accent-gold);
-}
-
-nav {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo img { 
-    height: 110px; 
-    width: auto;
-    border-radius: 4px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-}
-
-.nav-links { display: flex; align-items: center; gap: 30px; }
-.nav-links > li { position: relative; padding: 15px 0; }
-.nav-links a { font-size: 0.95rem; font-weight: 600; letter-spacing: 1px; }
-.nav-links a:hover, .nav-links li:hover > a { color: var(--accent-gold); }
-
-/* Dropdown */
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    background: var(--primary-blue);
-    min-width: 200px;
-    box-shadow: var(--shadow);
-    border-radius: 6px;
-    padding: 10px 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--transition);
-    border-top: 3px solid var(--accent-gold);
-}
-
-.dropdown-menu li a { padding: 10px 20px; display: block; font-size: 0.85rem; color: rgba(255, 255, 255, 0.9); }
-.dropdown-menu li a:hover { background: rgba(212, 175, 55, 0.2); color: var(--accent-gold); }
-.nav-links li:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-
-/* Mobilni hamburger */
-.menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-.menu-toggle span { width: 25px; height: 3px; background-color: var(--text-light); transition: var(--transition); }
-
-/* --- SADRŽAJ (Prilagođen tamnoj podlozi) --- */
-main { max-width: 1200px; margin: 180px auto 60px auto; padding: 0 20px; min-height: 70vh; }
-.page-header { text-align: center; margin-bottom: 50px; }
-.page-header h1 { font-size: 2.8rem; color: var(--text-light); margin-bottom: 10px; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
-.page-header h2 { font-size: 1.2rem; color: var(--accent-gold); font-weight: 400; letter-spacing: 1px; text-shadow: 1px 1px 2px rgba(0,0,0,0.6); }
-
-/* Kontrastne kartice na tamnom drvu */
-.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-.card { background: rgba(0, 0, 0, 0.45); backdrop-filter: blur(4px); padding: 30px; border-radius: 8px; box-shadow: var(--shadow); border-top: 4px solid var(--accent-gold); border-left: 1px solid rgba(255,255,255,0.1); }
-.card h3 { color: var(--accent-gold); margin-bottom: 15px; }
-.card p { color: #e0dcd3; }
-
-/* Software Layout */
-.software-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: start; }
-.main-view { background: rgba(0, 0, 0, 0.4); aspect-ratio: 16/10; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #a0aab5; border: 1px dashed var(--accent-gold); }
-.thumbs-holder { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 15px; }
-.thumb-box { background: rgba(0, 0, 0, 0.4); aspect-ratio: 16/10; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: #8894a0; }
-.checkout-card { background: var(--primary-blue); color: var(--text-light); padding: 40px; border-radius: 8px; border-top: 4px solid var(--accent-gold); box-shadow: var(--shadow); margin-top: 25px; border: 1px solid rgba(255,255,255,0.1); }
-.checkout-card h3 { color: var(--text-light); }
-.price-tag { font-size: 2.5rem; font-weight: 700; color: var(--accent-gold); margin: 15px 0; }
-.btn-stack { display: flex; flex-direction: column; gap: 15px; }
-
-/* Gumbi */
-.btn { display: inline-block; padding: 12px 30px; border-radius: 4px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; text-align: center; cursor: pointer; border: 2px solid transparent; }
-.btn-solid { background: var(--accent-gold); color: #000; }
-.btn-solid:hover { background: #ffe07d; }
-.btn-outline { background: transparent; color: var(--text-light); border-color: var(--text-light); }
-.btn-outline:hover { background: var(--text-light); color: var(--primary-blue); }
-.btn-hero { border-color: var(--accent-gold); color: var(--accent-gold); border-radius: 30px; margin-top: 20px; text-shadow: none; }
-.btn-hero:hover { background: var(--accent-gold); color: #000; }
-
-footer { background: #010b18; color: rgba(255, 255, 255, 0.4); padding: 40px 20px; text-align: center; font-size: 0.9rem; border-top: 4px solid var(--primary-blue); }
-
-@media (max-width: 768px) {
-    .menu-toggle { display: flex; }
-    .nav-links { position: absolute; top: 100%; left: 0; right: 0; background: var(--primary-blue); flex-direction: column; gap: 0; width: 100%; max-height: 0; overflow: hidden; transition: var(--transition); }
-    .nav-links.active { max-height: 450px; }
-    .nav-links > li { width: 100%; text-align: center; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
-    .dropdown-menu { position: static; transform: none; opacity: 1; visibility: visible; background: rgba(0, 0, 0, 0.2); display: none; }
-    .nav-links li:hover .dropdown-menu { display: block; }
-    .software-layout { grid-template-columns: 1fr; }
-    .logo img { height: 75px; }
-    main { margin-top: 130px; }
+    background-image: url('../assets/wood_pattern.jpg');
+    background-repeat: repeat;
+    background-position: center;
+    
+    /* Ovaj mod stapa svijetlu teksturu s našom tamnom drvenom bojom u pozadini */
+    background-blend-mode: multiply; 
 }
