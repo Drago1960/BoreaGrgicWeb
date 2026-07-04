@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOREA GRGIĆ | CNC Software</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- KOPIRANI HEADER -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><img src="assets/logo.png" alt="Logo"></a>
+            <div class="menu-toggle" id="mobile-menu-toggle"><span></span><span></span><span></span></div>
+            <ul class="nav-links" id="nav-links-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="wood-epoxy.html">WOOD & EPOXY ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="wood-epoxy.html#products">Products</a></li>
+                        <li><a href="wood-epoxy.html#gallery">Gallery</a></li>
+                        <li><a href="wood-epoxy.html#custom">Custom Orders</a></li>
+                    </ul>
+                </li>
+                <li><a href="software.html">SOFTWARE ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="software.html">ProbeXYZ.dll</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>CNC Software Solutions</h1>
+            <h2>Optimizacija i automatizacija strojnih procesa</h2>
+        </div>
+
+        <div class="software-layout">
+            <div class="gallery-holder">
+                <div class="main-view"><span>[ Sučelje u radu (screen1.png) ]</span></div>
+                <div class="thumbs-holder">
+                    <div class="thumb-box">[ Setup ]</div>
+                    <div class="thumb-box">[ Dijagram ]</div>
+                    <div class="thumb-box">[ Makro ]</div>
+                </div>
+            </div>
+
+            <div>
+                <span style="font-size: 0.8rem; background: #eee; padding: 4px 10px; border-radius:4px; font-weight:700;">PROBEXYZ.DLL</span>
+                <p style="margin: 20px 0; text-align: justify;">
+                    Originalni plugin za UCCNC okruženje koji automatizira pronalaženje nulte točke po X, Y i Z osi. Povećava preciznost i sprječava mehaničko oštećenje sonde.
+                </p>
+                
+                <div class="checkout-card">
+                    <h3>Licenca & Download</h3>
+                    <div class="price-tag">39.00 EUR <span style="font-size: 1rem; color: #777; font-weight: 400;">+ PDV</span></div>
+                    <div class="btn-stack">
+                        <button class="btn btn-solid" onclick="otvoriPaddleSustav()">Kupi licencu (Paddle)</button>
+                        <a href="assets/download/ProbeXYZ.zip" class="btn btn-outline" download>Preuzmi verziju (.ZIP)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer><p>&copy; 2026 BOREA GRGIĆ. Sva prava pridržana.</p></footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
