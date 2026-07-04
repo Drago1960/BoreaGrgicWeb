@@ -1,11 +1,11 @@
-/* --- VRIJEDNOSTI I BOJE (Tamno-sjajna modra i prirodno drvo u srednjem tonu) --- */
+/* --- VRIJEDNOSTI I BOJE (Zadržavamo pogođenu podlogu drva i tamno-sjajnu plavu) --- */
 :root {
     --primary-blue: #001a33;    /* Duboka, sjajna modra */
-    --wood-perfect: #ded0bc;    /* ZLATNA SREDINA: Prirodna nijansa toplog hrasta */
+    --wood-perfect: #ded0bc;    /* Tvoja pogođena nijansa prirodnog hrasta */
     --accent-gold: #c5a059;     /* Elegantna zlatna */
-    --text-dark: #2b2520;       /* Tamni tekst za savršenu čitljivost */
-    --text-light: #ffffff;
-    --transition: all 0.3s ease;
+    --text-dark: #2b2520;       /* Tamni tekst za sadržaj */
+    --text-light: #ffffff;      /* Čisti bijeli tekst za navigaciju */
+    --transition: all 0.25s ease-in-out;
     --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
@@ -16,13 +16,11 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     
-    /* DRVENA PODLOGA (Ni previše svijetla, ni previše tamna) */
+    /* DRVENA PODLOGA (Uzorak koji ti se sviđa) */
     background-color: var(--wood-perfect);
     background-image: url('../assets/wood_pattern.png');
     background-repeat: repeat;
     background-position: center;
-    
-    /* Multiply ovdje daje drvu prirodnu dubinu bez da ga baci u mrak */
     background-blend-mode: multiply; 
 }
 
@@ -30,43 +28,135 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
 
-/* --- NAVIGACIJSKA TRAKA S VALOVIMA IZ LOGOTIPA --- */
+/* --- RESTRUKTURIRANA I STABILNA NAVIGACIJSKA TRAKA --- */
 header {
     position: fixed;
     top: 0;
     width: 100%;
+    height: 90px; /* Fiksna visina sprječava gužvanje i preklapanje */
     z-index: 1000;
-    
     background-color: var(--primary-blue);
     
-    /* Valovi iz logotipa posijani na lijevu i desnu stranu trake */
+    /* Valovi iz logotipa u pozadini - pomaknuti skroz bočno da ne smetaju tekstu */
     background-image: url('../assets/wave_top.png'), url('../assets/wave_bottom.png');
     background-position: left center, right center;
     background-repeat: no-repeat, no-repeat;
-    background-size: contain, contain;
+    background-size: auto 100%; /* Valovi prate visinu trake */
     
     border-bottom: 2px solid var(--accent-gold);
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 nav {
-    max-width: 1300px;
+    max-width: 1400px;
+    height: 100%;
     margin: 0 auto;
-    padding: 10px 20px;
+    padding: 0 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 26, 51, 0.6); 
-    backdrop-filter: blur(1px);
+}
+
+/* Pozicioniranje Logotipa */
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .logo img { 
-    height: 110px; 
+    height: 70px; /* Smanjeno na optimalnu visinu da ne rasteže cijeli meni */
     width: auto;
     border-radius: 4px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
-.nav-links { display: flex; align-items: center; gap: 30px; }
-.nav-links > li { position: relative; padding: 15px 0; }
-.nav-links a { font-size: 0.95rem; font-weight: 600; letter-spacing: 1px; color: var(--text-light); }
+/* Glavni linkovi - fiksirani u jedan red bez zamatanja teksta */
+.nav-links { 
+    display: flex; 
+    align-items: center; 
+    gap: 35px; 
+    height: 100%;
+}
+
+.nav-links > li { 
+    position: relative; 
+    display: flex;
+    align-items: center;
+    height: 100%; /* Omogućuje prirodan hover prostor */
+}
+
+.nav-links a { 
+    font-size: 0.9rem; 
+    font-weight: 600; 
+    letter-spacing: 1px; 
+    color: var(--text-light);
+    white-space: nowrap; /* Sprječava skakanje teksta u novi red */
+    padding: 10px 0;
+}
+
+.nav-links a:hover, 
+.nav-links li:hover > a { 
+    color: var(--accent-gold); 
+}
+
+/* --- POTPUNO REFORMIRANI DROPDOWN IZBORNIK --- */
+.dropdown-menu {
+    position: absolute;
+    top: 90px; /* Savršeno se poravnava s dnom headera */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #001122;
+    min-width: 220px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    border-radius: 0 0 6px 6px;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    border-top: 3px solid var(--accent-gold);
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a { 
+    padding: 12px 20px; 
+    display: block; 
+    font-size: 0.85rem; 
+    color: rgba(255, 255, 255, 0.85);
+    text-align: left;
+}
+
+.dropdown-menu li a:hover { 
+    background: rgba(197, 160, 89, 0.15); 
+    color: var(--accent-gold); 
+    padding-left: 25px; /* Elegantni mali pomak na hoveru */
+}
+
+/* Prikaz dropdowna na hover bez trzanja */
+.nav-links li:hover .dropdown-menu { 
+    opacity: 1; 
+    visibility: visible; 
+    transform: translateX(-50%) translateY(0); 
+}
+
+/* Mobilni hamburger gumb */
+.menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.menu-toggle span { width: 25px; height: 3px; background-color: var(--text-light); transition: var(--transition); }
+
+/* --- STRUKTURA SADRŽAJA --- */
+main { max-width: 1200px; margin: 150px auto 60px auto; padding: 0 20px; min-height: 75vh; }
+.page-header { text-align: center; margin-bottom: 50px; }
+.page-header h1 { font-size: 2.8rem; color: var(--primary-blue); margin-bottom: 10px; font-weight: 700; }
+.page-header h2 { font-size: 1.2rem; color: var(--accent-gold); font-weight: 600; letter-spacing: 1px; }
+
+/* Kartice */
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+.card { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(6px); padding: 30px; border-radius: 8px; box-shadow: var(--shadow); border-top: 4px solid var(--primary-blue); border-left: 1px solid rgba(255,255,255,0.6); }
+.card h3 { color: var(--primary-blue); margin-bottom: 15px; }
+.card p { color: #443c35; }
+
+/* Software Stranica Layout */
+.software-layout { display: grid;
