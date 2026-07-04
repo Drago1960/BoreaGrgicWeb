@@ -1,12 +1,12 @@
-/* --- VRIJEDNOSTI I BOJE (Tamno-sjajna modra i čisto svijetlo drvo) --- */
+/* --- VRIJEDNOSTI I BOJE (Tamno-sjajna modra i umjereno tamno drvo) --- */
 :root {
     --primary-blue: #001a33;    /* Duboka, sjajna modra */
-    --wood-bright: #f2ede4;     /* PUNO SVJETLIJA, čista nijansa drva */
+    --wood-medium-dark: #3a2211; /* Malo tamnija, bogata nijansa drva */
     --accent-gold: #c5a059;     /* Elegantna zlatna */
-    --text-dark: #332c26;       /* Kontrastni tamni tekst za maksimalnu čitljivost na svijetloj podlozi */
+    --text-dark: #ffffff;       /* Tekst prebačen u svijetli jer je drvo opet tamnije */
     --text-light: #ffffff;
     --transition: all 0.3s ease;
-    --shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,37 +16,38 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     
-    /* DRVENA PODLOGA (Sada izrazito svijetla) */
-    background-color: var(--wood-bright);
+    /* DRVENA PODLOGA (Vraćena u dosta tamniju nijansu) */
+    background-color: var(--wood-medium-dark);
     background-image: url('../assets/wood_pattern.png');
     background-repeat: repeat;
     background-position: center;
     
-    /* 'soft-light' savršeno stapa godove, ali ostavlja podlogu posve svijetlom i čistom */
-    background-blend-mode: soft-light; 
+    /* Stapanje koje omogućuje da se godovi jasno vide, ali u tamnijem tonu */
+    background-blend-mode: multiply; 
 }
 
 a { text-decoration: none; color: inherit; transition: var(--transition); }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
 
-/* --- NAVIGACIJSKA TRAKA S VALOVIMA IZ LOGOTIPA --- */
+/* --- NAVIGACIJSKA TRAKA S "POSIJANIM" VALOVIMA IZ LOGOTIPA --- */
 header {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     
+    /* Osnovna tamno plava podloga */
     background-color: var(--primary-blue);
     
-    /* Valovi iz logotipa posijani na lijevu i desnu stranu trake */
+    /* Ovdje "sijemo" elemente iz logotipa: wave_top s lijeve strane, wave_bottom s desne strane */
     background-image: url('../assets/wave_top.png'), url('../assets/wave_bottom.png');
     background-position: left center, right center;
     background-repeat: no-repeat, no-repeat;
-    background-size: contain, contain;
+    background-size: contain, contain; /* Prilagođava se visini navigacije */
     
     border-bottom: 2px solid var(--accent-gold);
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 nav {
@@ -56,6 +57,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* Lagani poluprozirni sloj da tekst preko posijanih valova ostane čitljiv */
     background: rgba(0, 26, 51, 0.6); 
     backdrop-filter: blur(1px);
 }
@@ -69,7 +71,7 @@ nav {
 
 .nav-links { display: flex; align-items: center; gap: 30px; }
 .nav-links > li { position: relative; padding: 15px 0; }
-.nav-links a { font-size: 0.95rem; font-weight: 600; letter-spacing: 1px; color: var(--text-light); }
+.nav-links a { font-size: 0.95rem; font-weight: 600; letter-spacing: 1px; }
 .nav-links a:hover, .nav-links li:hover > a { color: var(--accent-gold); }
 
 /* Dropdown izbornik */
@@ -97,38 +99,36 @@ nav {
 .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
 .menu-toggle span { width: 25px; height: 3px; background-color: var(--text-light); transition: var(--transition); }
 
-/* --- STRUKTURA SADRŽAJA --- */
+/* --- STRUKTURA SADRŽAJA (Zatamnjene kartice za bolji kontrast na tamnijem drvu) --- */
 main { max-width: 1200px; margin: 180px auto 60px auto; padding: 0 20px; min-height: 70vh; }
 .page-header { text-align: center; margin-bottom: 50px; }
-.page-header h1 { font-size: 2.8rem; color: var(--primary-blue); margin-bottom: 10px; font-weight: 700; }
+.page-header h1 { font-size: 2.8rem; color: var(--text-light); margin-bottom: 10px; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
 .page-header h2 { font-size: 1.2rem; color: var(--accent-gold); font-weight: 600; letter-spacing: 1px; }
 
-/* Blage, profinjene kartice prilagođene svijetloj pozadini */
 .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-.card { background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(6px); padding: 30px; border-radius: 8px; box-shadow: var(--shadow); border-top: 4px solid var(--primary-blue); border-left: 1px solid rgba(255,255,255,0.6); }
-.card h3 { color: var(--primary-blue); margin-bottom: 15px; }
-.card p { color: #554c44; }
+.card { background: rgba(0, 0, 0, 0.45); backdrop-filter: blur(4px); padding: 30px; border-radius: 8px; box-shadow: var(--shadow); border-top: 4px solid var(--accent-gold); border-left: 1px solid rgba(255,255,255,0.1); }
+.card h3 { color: var(--accent-gold); margin-bottom: 15px; }
+.card p { color: #e0dcd3; }
 
 /* Software Stranica Layout */
 .software-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: start; }
-.main-view { background: rgba(255, 255, 255, 0.6); aspect-ratio: 16/10; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #555; border: 1px dashed var(--accent-gold); }
+.main-view { background: rgba(0, 0, 0, 0.4); aspect-ratio: 16/10; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #a0aab5; border: 1px dashed var(--accent-gold); }
 .thumbs-holder { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 15px; }
-.thumb-box { background: rgba(255, 255, 255, 0.6); aspect-ratio: 16/10; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: #666; }
+.thumb-box { background: rgba(0, 0, 0, 0.4); aspect-ratio: 16/10; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: #8894a0; }
 
-/* Istaknuta tamna checkout kartica */
-.checkout-card { background: linear-gradient(180deg, #00264d 0%, #001122 100%); color: var(--text-light); padding: 40px; border-radius: 8px; border-top: 4px solid var(--accent-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin-top: 25px; }
+.checkout-card { background: linear-gradient(180deg, #00264d 0%, #001122 100%); color: var(--text-light); padding: 40px; border-radius: 8px; border-top: 4px solid var(--accent-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.3); margin-top: 25px; border: 1px solid rgba(255,255,255,0.1); }
 .checkout-card h3 { color: var(--text-light); }
 .price-tag { font-size: 2.5rem; font-weight: 700; color: var(--accent-gold); margin: 15px 0; }
 .btn-stack { display: flex; flex-direction: column; gap: 15px; }
 
 /* Gumbi */
 .btn { display: inline-block; padding: 12px 30px; border-radius: 4px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; text-align: center; cursor: pointer; border: 2px solid transparent; }
-.btn-solid { background: var(--accent-gold); color: #fff; }
-.btn-solid:hover { background: #b48f48; }
+.btn-solid { background: var(--accent-gold); color: #000; }
+.btn-solid:hover { background: #ffe07d; }
 .btn-outline { background: transparent; color: var(--text-light); border-color: var(--text-light); }
 .btn-outline:hover { background: var(--text-light); color: var(--primary-blue); }
 .btn-hero { border-color: var(--accent-gold); color: var(--accent-gold); border-radius: 30px; margin-top: 20px; }
-.btn-hero:hover { background: var(--accent-gold); color: #fff; }
+.btn-hero:hover { background: var(--accent-gold); color: #000; }
 
 footer { background: #000b14; color: rgba(255, 255, 255, 0.4); padding: 40px 20px; text-align: center; font-size: 0.9rem; border-top: 4px solid var(--accent-gold); }
 
