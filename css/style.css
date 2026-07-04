@@ -2,7 +2,7 @@
 :root {
     --primary-blue: #001a33;    /* Duboka, sjajna modra */
     --accent-gold: #c5a059;     /* Elegantna zlatna */
-    --text-dark: #000000;       /* Gurnuto u čistu crnu boju za glavna slova */
+    --text-dark: #000000;       /* Glavna slova u čistu crnu */
     --text-light: #ffffff;
     --transition: all 0.3s ease;
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -19,7 +19,6 @@ body {
     background-image: url('../assets/wood_pattern.png');
     background-repeat: repeat;
     background-position: center;
-    /* background-color i background-blend-mode su potpuno uklonjeni da se vidi čisti, izvorni png */
 }
 
 a { text-decoration: none; color: inherit; transition: var(--transition); }
@@ -70,7 +69,13 @@ nav {
 .nav-links a { font-size: 0.95rem; font-weight: 600; letter-spacing: 1px; color: var(--text-light); } /* Tekst u navu ostaje svijetao zbog tamne trake */
 .nav-links a:hover, .nav-links li:hover > a { color: var(--accent-gold); }
 
-/* Dropdown izbornik */
+/* Dropdown izbornik - VRAĆENA ORIGINALNA KLASA I POZICIONIRANJE */
 .dropdown-menu {
     position: absolute;
-    top:
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #001122;
+    min-width: 200px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    border-radius:
