@@ -1,27 +1,14 @@
-/* --- WOOD, EPOXY & GOLD PALETTE --- */
-:root {
-    --primary-blue: #003366;    /* Duboka modra boja mora (Deep Sea Blue Epoxy) */
-    --wood-dark: #201107;       /* Dosta tamnija, bogata nijansa drva */
-    --accent-gold: #d4af37;     /* Izraženija zlatna za detalje */
-    --text-dark: #f5efe6;       /* Svijetli tekst za izvrsnu čitljivost */
-    --text-light: #ffffff;
-    --transition: all 0.3s ease;
-    --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-}
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
 body {
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
     color: var(--text-dark);
     line-height: 1.6;
     
-    /* GLAVNA PODLOGA S VJERNIM UZORKOM DRVA */
+    /* TOČNA PUTANJA NA TVOJU PNG TEKSTURU DRVA */
     background-color: var(--wood-dark);
-    background-image: url('../assets/wood_pattern.jpg');
+    background-image: url('../assets/wood_pattern.png');
     background-repeat: repeat;
     background-position: center;
     
-    /* Ovaj mod stapa svijetlu teksturu s našom tamnom drvenom bojom u pozadini */
+    /* Savršeno stapanje teksture s tamnom bojom drva */
     background-blend-mode: multiply; 
 }
