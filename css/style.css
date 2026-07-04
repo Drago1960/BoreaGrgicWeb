@@ -1,12 +1,12 @@
-/* --- VRIJEDNOSTI I BOJE (Tamno-sjajna modra i čisto svijetlo drvo) --- */
+/* --- VRIJEDNOSTI I BOJE (Tamno-sjajna modra i prirodno drvo u srednjem tonu) --- */
 :root {
     --primary-blue: #001a33;    /* Duboka, sjajna modra */
-    --wood-bright: #f2ede4;     /* PUNO SVJETLIJA, čista nijansa drva */
+    --wood-perfect: #ded0bc;    /* ZLATNA SREDINA: Prirodna nijansa toplog hrasta */
     --accent-gold: #c5a059;     /* Elegantna zlatna */
-    --text-dark: #332c26;       /* Kontrastni tamni tekst za maksimalnu čitljivost na svijetloj podlozi */
+    --text-dark: #2b2520;       /* Tamni tekst za savršenu čitljivost */
     --text-light: #ffffff;
     --transition: all 0.3s ease;
-    --shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,14 +16,14 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     
-    /* DRVENA PODLOGA (Sada izrazito svijetla) */
-    background-color: var(--wood-bright);
+    /* DRVENA PODLOGA (Ni previše svijetla, ni previše tamna) */
+    background-color: var(--wood-perfect);
     background-image: url('../assets/wood_pattern.png');
     background-repeat: repeat;
     background-position: center;
     
-    /* 'soft-light' savršeno stapa godove, ali ostavlja podlogu posve svijetlom i čistom */
-    background-blend-mode: soft-light; 
+    /* Multiply ovdje daje drvu prirodnu dubinu bez da ga baci u mrak */
+    background-blend-mode: multiply; 
 }
 
 a { text-decoration: none; color: inherit; transition: var(--transition); }
@@ -70,77 +70,3 @@ nav {
 .nav-links { display: flex; align-items: center; gap: 30px; }
 .nav-links > li { position: relative; padding: 15px 0; }
 .nav-links a { font-size: 0.95rem; font-weight: 600; letter-spacing: 1px; color: var(--text-light); }
-.nav-links a:hover, .nav-links li:hover > a { color: var(--accent-gold); }
-
-/* Dropdown izbornik */
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    background: #001122;
-    min-width: 200px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
-    border-radius: 6px;
-    padding: 10px 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--transition);
-    border-top: 3px solid var(--accent-gold);
-}
-
-.dropdown-menu li a { padding: 10px 20px; display: block; font-size: 0.85rem; color: rgba(255, 255, 255, 0.9); }
-.dropdown-menu li a:hover { background: rgba(197, 160, 89, 0.2); color: var(--accent-gold); }
-.nav-links li:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-
-/* Mobilni hamburger */
-.menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-.menu-toggle span { width: 25px; height: 3px; background-color: var(--text-light); transition: var(--transition); }
-
-/* --- STRUKTURA SADRŽAJA --- */
-main { max-width: 1200px; margin: 180px auto 60px auto; padding: 0 20px; min-height: 70vh; }
-.page-header { text-align: center; margin-bottom: 50px; }
-.page-header h1 { font-size: 2.8rem; color: var(--primary-blue); margin-bottom: 10px; font-weight: 700; }
-.page-header h2 { font-size: 1.2rem; color: var(--accent-gold); font-weight: 600; letter-spacing: 1px; }
-
-/* Blage, profinjene kartice prilagođene svijetloj pozadini */
-.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-.card { background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(6px); padding: 30px; border-radius: 8px; box-shadow: var(--shadow); border-top: 4px solid var(--primary-blue); border-left: 1px solid rgba(255,255,255,0.6); }
-.card h3 { color: var(--primary-blue); margin-bottom: 15px; }
-.card p { color: #554c44; }
-
-/* Software Stranica Layout */
-.software-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: start; }
-.main-view { background: rgba(255, 255, 255, 0.6); aspect-ratio: 16/10; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #555; border: 1px dashed var(--accent-gold); }
-.thumbs-holder { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 15px; }
-.thumb-box { background: rgba(255, 255, 255, 0.6); aspect-ratio: 16/10; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: #666; }
-
-/* Istaknuta tamna checkout kartica */
-.checkout-card { background: linear-gradient(180deg, #00264d 0%, #001122 100%); color: var(--text-light); padding: 40px; border-radius: 8px; border-top: 4px solid var(--accent-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin-top: 25px; }
-.checkout-card h3 { color: var(--text-light); }
-.price-tag { font-size: 2.5rem; font-weight: 700; color: var(--accent-gold); margin: 15px 0; }
-.btn-stack { display: flex; flex-direction: column; gap: 15px; }
-
-/* Gumbi */
-.btn { display: inline-block; padding: 12px 30px; border-radius: 4px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; text-align: center; cursor: pointer; border: 2px solid transparent; }
-.btn-solid { background: var(--accent-gold); color: #fff; }
-.btn-solid:hover { background: #b48f48; }
-.btn-outline { background: transparent; color: var(--text-light); border-color: var(--text-light); }
-.btn-outline:hover { background: var(--text-light); color: var(--primary-blue); }
-.btn-hero { border-color: var(--accent-gold); color: var(--accent-gold); border-radius: 30px; margin-top: 20px; }
-.btn-hero:hover { background: var(--accent-gold); color: #fff; }
-
-footer { background: #000b14; color: rgba(255, 255, 255, 0.4); padding: 40px 20px; text-align: center; font-size: 0.9rem; border-top: 4px solid var(--accent-gold); }
-
-/* Responzivnost */
-@media (max-width: 768px) {
-    .menu-toggle { display: flex; }
-    .nav-links { position: absolute; top: 100%; left: 0; right: 0; background: #001122; flex-direction: column; gap: 0; width: 100%; max-height: 0; overflow: hidden; transition: var(--transition); }
-    .nav-links.active { max-height: 450px; }
-    .nav-links > li { width: 100%; text-align: center; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
-    .dropdown-menu { position: static; transform: none; opacity: 1; visibility: visible; background: rgba(0, 0, 0, 0.2); display: none; }
-    .nav-links li:hover .dropdown-menu { display: block; }
-    .software-layout { grid-template-columns: 1fr; }
-    .logo img { height: 75px; }
-    main { margin-top: 130px; }
-}
