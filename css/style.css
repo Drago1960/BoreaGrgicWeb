@@ -65,10 +65,10 @@ nav {
 }
 
 /* Izolirani linkovi unutar navigacije kako se ne bi miješali s crnim slovima body-ja */
-.nav-links { display: flex; align-items: center; gap: 30px; }
+.nav-links { display: flex; align-items: center; gap: 45px; }
 .nav-links > li { position: relative; padding: 15px 0; }
   .nav-links a {
-    font-size: 1.6rem; /* Povećano s 0.95rem radi bolje uočljivosti */
+    font-size: 1.3rem; /* Povećano s 0.95rem radi bolje uočljivosti */
     font-weight: 600;
     letter-spacing: 1px;
     color: var(--text-light) !important;
