@@ -67,7 +67,13 @@ nav {
 /* Izolirani linkovi unutar navigacije kako se ne bi miješali s crnim slovima body-ja */
 .nav-links { display: flex; align-items: center; gap: 30px; }
 .nav-links > li { position: relative; padding: 15px 0; }
-.nav-links a { font-size: 0.95rem; font-weight: 600; letter-spacing: 1px; color: var(--text-light) !important; }
+  .nav-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--text-light) !important;
+    white-space: nowrap; /* SPREČAVA PRELAMANJE TEKSTA U NOVI RED */
+  }
 .nav-links a:hover, .nav-links li:hover > a { color: var(--accent-gold) !important; }
 
 /* Dropdown izbornik - NETAKNUTA ORIGINALNA STRUKTURA I POZICIJA */
@@ -87,7 +93,13 @@ nav {
     border-top: 3px solid var(--accent-gold);
 }
 
-.dropdown-menu li a { padding: 10px 20px; display: block; font-size: 0.85rem; color: rgba(255, 255, 255, 0.9) !important; }
+  .dropdown-menu li a {
+    padding: 10px 20px;
+    display: block;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9) !important;
+    white-space: nowrap; /* SPREČAVA PRELAMANJE UNUTAR DROPDOWNA */
+  }
 .dropdown-menu li a:hover { background: rgba(197, 160, 89, 0.2); color: var(--accent-gold) !important; }
 .nav-links li:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
 
@@ -184,10 +196,9 @@ footer { background: #000b14; color: rgba(255, 255, 255, 0.4); padding: 40px 20p
     }
 
       .dropdown-menu li a {
-        padding: 8px 10px;
+        padding: 8px 25px 8px 20px; /* Dodano više prostora s desne strane (25px) */
         text-align: left;
-        font-size: 0.9rem;
-        display: block;
+        white-space: nowrap; /* Osigurava jedan red i na mobilnim ekranima */
       }
 
   .software-layout {
