@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOREA GRGIĆ | Probe XYZ UCCNC Plugin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main>
+    <div class="page-header">
+      <h1>Probe XYZ</h1>
+      <h2>High-performance 3D probing plugin for UCCNC</h2>
+    </div>
+
+    <div class="software-layout">
+      
+      <!-- LIJEVI STUPAC: Galerija i YouTube -->
+      <div class="gallery-holder">
+        <!-- Glavni prikaz slike -->
+        <div class="main-view">
+          <img id="main-software-img" src="assets/ProbeXYZtab1.png" alt="Probe XYZ Interface">
+        </div>
+        <!-- Male sličice (Thumbs) koje mijenjaju glavnu sliku na klik -->
+        <div class="thumbs-holder">
+          <div class="thumb-box" onclick="changeImage('assets/ProbeXYZtab1.png')">
+            <img src="assets/ProbeXYZtab1.png" alt="Tab 1">
+          </div>
+          <div class="thumb-box" onclick="changeImage('assets/ProbeXYZtab2.png')">
+            <img src="assets/ProbeXYZtab2.png" alt="Tab 2">
+          </div>
+          <div class="thumb-box" onclick="changeImage('assets/ProbeXYZconfig.png')">
+            <img src="assets/ProbeXYZconfig.png" alt="Settings">
+          </div>
+        </div>
+
+        <!-- Ugrađeni YouTube Player -->
+        <div class="video-container" style="margin-top: 40px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+          <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                  src="https://www.youtube.com/embed/ytTlplLtJ98?rel=0"
+                  title="Probe XYZ UCCNC Plugin Demonstration"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <!-- DESNI STUPAC: Tekstualni opis i Licenca -->
+      <div class="software-details">
+        <span style="font-size: 0.8rem; background: rgba(0, 0, 0, 0.05); padding: 4px 10px; border-radius:4px; font-weight:700;">UCCNC PLUGIN</span>
+        
+        <p style="margin: 20px 0;">
+          An original, high-performance software plugin tailored specifically for the UCCNC environment. Developed to automate the 3D probing sequence, this tool automatically zeros your X, Y, and Z axes simultaneously with utmost engineering precision.
+        </p>
+
+        <h4 style="margin-bottom: 10px;">Key Features:</h4>
+        <ul style="margin-bottom: 30px; padding-left: 20px; list-style-type: square;">
+          <li style="margin-bottom: 5px;">Fast and highly reliable 3D probing routine (X, Y, Z axis automated corner finding).</li>
+          <li style="margin-bottom: 5px;">Smart probe crash protection algorithms to safeguard your hardware.</li>
+          <li style="margin-bottom: 5px;">Seamless mapping to custom macros and hardware buttons for streamlined operation.</li>
+        </ul>
+
+        <!-- Kartica za Download i Kupnju -->
+        <div class="checkout-card" style="background: rgba(0,0,0,0.03); padding: 25px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08);">
+          <h3>License & Download</h3>
+          <!-- Cijena je ostavljena kao TBD (To Be Determined) dok ne definiraš detalje -->
+          <div class="price-tag" style="font-size: 1.5rem; font-weight: bold; margin: 10px 0 20px 0;">
+            TBD EUR <span style="font-size: 1rem; color: #888; font-weight: 400;">(Price details coming soon)</span>
+          </div>
+          
+          <div class="btn-stack" style="display: flex; flex-direction: column; gap: 10px;">
+            <!-- Gumb za Paddle (funkciju otvoriPaddleSustav() ostavljamo spremnu) -->
+            <button class="btn btn-solid" onclick="otvoriPaddleSustav()" style="width: 100%; padding: 12px; font-weight: bold; cursor: pointer;">
+              Buy License (Paddle)
+            </button>
+            <!-- Gumb za download potpuno funkcionalnog paketa -->
+            <a href="assets/download/ProbeXYZ_pack.zip" class="btn btn-outline" download style="display: block; text-align: center; padding: 12px; border: 1px solid #001122; color: #001122; text-decoration: none; font-weight: bold; border-radius: 4px;">
+              Download Demo Pack (.ZIP)
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer><p>&copy; 2026 BOREA GRGIĆ. All rights reserved.</p></footer>
+  
+  <!-- Skripta za brzu izmjenu slika u galeriji -->
+  <script>
+    function changeImage(imageSrc) {
+      document.getElementById('main-software-img').src = imageSrc;
+    }
+    
+    function otvoriPaddleSustav() {
+      // Privremeni alert dok ne postaviš zakonske zahtjeve i Paddle integraciju
+      alert("Checkout system integration is pending regulatory setup. Demo download is fully available!");
+    }
+  </script>
+  
+  <script src="js/main.js"></script>
+  <script src="js/navigacija.js"></script>
+</body>
+</html>

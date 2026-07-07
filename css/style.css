@@ -26,6 +26,38 @@ body {
 h1, h2, h3, h4 {
   color: #001122; /* Ista tamna boja za sve naslove na webu */
 }
+.gallery-holder .main-view img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.thumbs-holder {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumb-box {
+  flex: 1;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+  .thumb-box:hover {
+    border-color: #001122; /* Tvoja tamna boja iz body-ja označava fokus */
+  }
+
+  .thumb-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
 
 
 a { text-decoration: none; color: inherit; transition: var(--transition); }

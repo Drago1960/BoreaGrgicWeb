@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <li>
                     <a href="software.html">Software</a>
                     <ul class="dropdown-menu">
-                        <li><a href="software.html#probe">ProbeXYZ - UCCNC plugin</a></li>
+                        <li><a href="probexyz.html">ProbeXYZ - UCCNC plugin</a></li>
                     </ul>
                 </li>
                 <li><a href="about.html">About</a></li>
