@@ -9,6 +9,6 @@ moj-web-projekt/
 │   └── main.js            
 ├── index.html             <-- HOME
 ├── wood-epoxy.html        <-- WOOD & EPOXY (Sa sidrima unutar stranice za Products, Gallery, Custom)
-├── software.html          <-- SOFTWARE (ProbeXYZ.dll)
+├── software.html          <-- SOFTWARE (ProbeXYZ - UCCNC plugin)
 ├── about.html             <-- ABOUT
 └── contact.html           <-- CONTACT
