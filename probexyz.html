@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOREA GRGIĆ | Probe XYZ UCCNC Plugin</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css"></head><body>
 
   <main>
     <div class="page-header">
@@ -64,19 +60,22 @@
         <!-- Kartica za Download i Kupnju -->
         <div class="checkout-card" style="background: rgba(0,0,0,0.03); padding: 25px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08);">
           <h3>License & Download</h3>
-          <!-- Cijena je ostavljena kao TBD (To Be Determined) dok ne definiraš detalje -->
           <div class="price-tag" style="font-size: 1.5rem; font-weight: bold; margin: 10px 0 20px 0;">
             TBD EUR <span style="font-size: 1rem; color: #888; font-weight: 400;">(Price details coming soon)</span>
           </div>
           
           <div class="btn-stack" style="display: flex; flex-direction: column; gap: 10px;">
-            <!-- Gumb za Paddle (funkciju otvoriPaddleSustav() ostavljamo spremnu) -->
+            <!-- Gumb za Paddle -->
             <button class="btn btn-solid" onclick="otvoriPaddleSustav()" style="width: 100%; padding: 12px; font-weight: bold; cursor: pointer;">
               Buy License (Paddle)
             </button>
             <!-- Gumb za download potpuno funkcionalnog paketa -->
             <a href="assets/download/ProbeXYZ_pack.zip" class="btn btn-outline" download style="display: block; text-align: center; padding: 12px; border: 1px solid #001122; color: #001122; text-decoration: none; font-weight: bold; border-radius: 4px;">
               Download Demo Pack (.ZIP)
+            </a>
+            <!-- Gumb za otvaranje PDF priručnika u novom tabu -->
+            <a href="assets/download/Probe_XYZ_instructions_v1_EN.pdf" target="_blank" class="btn btn-text" style="display: block; text-align: center; padding: 10px; color: #001122; text-decoration: underline; font-weight: 500; font-size: 0.9rem;">
+              Read User Manual (PDF)
             </a>
           </div>
         </div>
@@ -94,12 +93,9 @@
     }
     
     function otvoriPaddleSustav() {
-      // Privremeni alert dok ne postaviš zakonske zahtjeve i Paddle integraciju
       alert("Checkout system integration is pending regulatory setup. Demo download is fully available!");
     }
   </script>
   
   <script src="js/main.js"></script>
-  <script src="js/navigacija.js"></script>
-</body>
-</html>
+  <script src="js/navigacija.js"></script></body></html>
