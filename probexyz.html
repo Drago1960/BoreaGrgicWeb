@@ -32,7 +32,7 @@
     </div>
 
     <div class="software-layout">
-      
+
       <!-- LIJEVI STUPAC: Galerija i YouTube -->
       <div class="gallery-holder">
         <!-- Glavni prikaz slike -->
@@ -114,31 +114,31 @@
   </main>
 
   <footer><p>&copy; 2026 BOREA GRGIĆ. All rights reserved.</p></footer>
-  
+
   <!-- Skripta za galeriju slika -->
   <script>
     function changeImage(imageSrc) {
       document.getElementById('main-software-img').src = imageSrc;
     }
   </script>
-  
+
   <!-- Učitavanje vanjskih skripti -->
   <script src="js/main.js"></script>
   <script src="js/navigacija.js"></script>
 
   <!-- ČISTA I SIGURNA PADDLE AKCIJA POSTAVLJENA NA SAMO DNO -->
+  <!-- POPRAVLJENA PADDLE FUNKCIJA (PADDLE v2 FORMAT) -->
   <script>
     function otvoriPaddleSustav() {
       Paddle.Checkout.open({
         settings: {
-          displayMode: 'overlay',
-          theme: 'light',
-          locale: 'en',
-          variant: 'one-page'
+          displayMode: "overlay",
+          theme: "light",
+          locale: "en"
         },
         items: [
           {
-            priceId: 'pri_01kx9e005vss58j1sdgawnpxf9', // ID tvoje cijene od 19.99€
+            priceId: "pri_01kx9e005vss58j1sdgawnpxf9", // Tvoj točan ID cijene
             quantity: 1
           }
         ]
