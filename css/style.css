@@ -1,14 +1,16 @@
-/* --- WOOD & EPOXY STRANICA (Sustav proširivih kartica) --- */
-.wood-epoxy-container {
+/* ==========================================
+   WOOD & EPOXY - MODULARNE GALERIJE PROIZVODA
+   ========================================== */
+.we-products-container {
     display: flex;
     flex-direction: column;
-    gap: 60px; /* Razmak između različitih proizvoda */
+    gap: 50px; /* Razmak između kartica proizvoda */
 }
 
-.wood-epoxy-card {
+.we-product-row {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 50px;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 45px;
     align-items: start;
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(4px);
@@ -17,92 +19,100 @@
     box-shadow: var(--shadow);
     border-top: 4px solid var(--accent-gold);
     border-left: 1px solid rgba(0,0,0,0.05);
-    scroll-margin-top: 200px; /* Sprječava da fiksni header prekrije naslov pri skrolu */
+    scroll-margin-top: 190px; /* Sprječava da fixed header prekrije naslov proizvoda pri kliku na link */
 }
 
-.we-gallery-block {
+.we-gallery-side {
     display: flex;
     flex-direction: column;
 }
 
-.we-main-view img {
+.we-display-frame {
     width: 100%;
-    height: 380px;
-    object-fit: cover;
+    height: 400px;
     border-radius: 6px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    display: block;
-}
-
-.we-thumbs-holder {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.we-thumb-box {
-    cursor: pointer;
-    border: 2px solid transparent;
-    border-radius: 4px;
     overflow: hidden;
-    transition: var(--transition);
-    height: 80px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.02);
 }
 
-.we-thumb-box img {
+.we-display-frame img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-.we-thumb-box:hover, .we-thumb-box.active {
+.we-thumbnails-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.we-thumb {
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 85px;
+    transition: var(--transition);
+}
+
+.we-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Hover i aktivno stanje sličice prate primarnu boju */
+.we-thumb:hover, .we-thumb.active {
     border-color: var(--primary-blue);
 }
 
-.we-details-block {
-    padding-top: 10px;
+.we-info-side {
+    padding-top: 5px;
 }
 
-.we-badge {
+.we-category-tag {
     display: inline-block;
     font-size: 0.75rem;
-    background: rgba(0, 26, 51, 0.05);
-    color: var(--primary-blue);
-    padding: 4px 10px;
-    border-radius: 4px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 15px;
-}
-
-.we-details-block h3 {
-    font-size: 2rem;
-    margin-bottom: 15px;
     color: var(--primary-blue);
+    background: rgba(0, 26, 51, 0.06);
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
 }
 
-.we-details-block p {
+.we-info-side h3 {
+    font-size: 2.1rem;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.we-info-side p {
     color: var(--text-dark);
     line-height: 1.8;
 }
 
-/* Prilagodba za mobilne uređaje */
+/* Responzivnost za mobilne uređaje */
 @media (max-width: 768px) {
-    .wood-epoxy-card {
+    .we-product-row {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 20px;
         padding: 20px;
     }
-    .we-main-view img {
-        height: 240px;
+    .we-display-frame {
+        height: 250px;
     }
-    .we-thumb-box {
-        height: 60px;
+    .we-thumb {
+        height: 65px;
     }
-    .we-details-block h3 {
+    .we-info-side h3 {
         font-size: 1.6rem;
     }
 }

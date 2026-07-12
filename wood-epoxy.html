@@ -1,5 +1,6 @@
-<!DOCTYPE html><html lang="en"><head>
-  <!-- Google tag (gtag.js) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9T2H0MJBL7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -11,70 +12,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BOREA GRGIĆ | Wood & Epoxy</title>
-  <link rel="stylesheet" href="css/style.css"></head><body>
-
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
   <main>
     <div class="page-header">
       <h1>Wood & Epoxy</h1>
       <h2>Natural wood textures captured in high-quality resin</h2>
     </div>
 
-    <!-- PORTFOLIO SECTION -->
-    <section id="portfolio" style="padding: 20px 0;">
-      <h2 style="border-bottom: 2px solid var(--accent-gold); padding-bottom: 10px; margin-bottom: 40px;">Our Portfolio</h2>
-      
-      <div class="wood-epoxy-container">
+    <section id="products" style="padding: 40px 0;">
+      <h2 style="border-bottom: 2px solid var(--accent-gold); padding-bottom: 10px;">Our Products</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Coffee Tables</h3>
+          <p>Unique river designs tailored to complement modern interiors and living spaces.</p>
+        </div>
+        <div class="card">
+          <h3>Wall Art & Reliefs</h3>
+          <p>A striking combination of precision CNC wood carving and vibrant epoxy fills.</p>
+        </div>
+        <div class="card">
+          <h3>Serving Boards</h3>
+          <p>Premium small-scale custom pieces, ideal for luxury gifts and statement tableware.</p>
+        </div>
+      </div>
+    </section>
 
-        <!-- PROIZVOD 1: GIN & EPOXY (Kategorija: Coffee Tables) -->
-        <div class="wood-epoxy-card" id="tables">
-          <div class="we-gallery-block">
-            <div class="we-main-view">
-              <img id="img-gin" src="assets/gin_1.jpg" alt="Gin & Epoxy Table">
+    <section id="gallery" style="padding: 60px 0 40px 0; margin-top: 40px;">
+      <h2 style="border-bottom: 2px solid var(--accent-gold); padding-bottom: 10px; margin-bottom: 40px;">Gallery</h2>
+      
+      <div class="we-products-container">
+
+        <div class="we-product-row" id="hungry-hearts">
+          <div class="we-gallery-side">
+            <div class="we-display-frame">
+              <img id="view-hungry" src="assets/images/HungryHearts/HungryHearts1.jpeg" alt="Hungry Hearts Serving Board">
             </div>
-            <div class="we-thumbs-holder">
-              <div class="we-thumb-box active" onclick="switchWeImage('img-gin', 'assets/gin_1.jpg', this)">
-                <img src="assets/gin_1.jpg" alt="Gin & Epoxy view 1">
+            <div class="we-thumbnails-grid">
+              <div class="we-thumb active" onclick="changeWeImage('view-hungry', 'assets/images/HungryHearts/HungryHearts1.jpeg', this)">
+                <img src="assets/images/HungryHearts/HungryHearts1.jpeg" alt="View 1">
               </div>
-              <div class="we-thumb-box" onclick="switchWeImage('img-gin', 'assets/gin_2.jpg', this)">
-                <img src="assets/gin_2.jpg" alt="Gin & Epoxy view 2">
+              <div class="we-thumb" onclick="changeWeImage('view-hungry', 'assets/images/HungryHearts/HungryHearts5.jpeg', this)">
+                <img src="assets/images/HungryHearts/HungryHearts5.jpeg" alt="View 2">
               </div>
-              <div class="we-thumb-box" onclick="switchWeImage('img-gin', 'assets/gin_3.jpg', this)">
-                <img src="assets/gin_3.jpg" alt="Gin & Epoxy view 3">
+              <div class="we-thumb" onclick="changeWeImage('view-hungry', 'assets/images/HungryHearts/HungryHearts6.jpeg', this)">
+                <img src="assets/images/HungryHearts/HungryHearts6.jpeg" alt="View 3">
               </div>
             </div>
           </div>
-          <div class="we-details-block">
-            <span class="we-badge">Coffee Table</span>
-            <h3>Gin & Epoxy</h3>
+          <div class="we-info-side">
+            <span class="we-category-tag">Serving Board</span>
+            <h3>Hungry Hearts</h3>
             <p>
-              A custom-crafted small table featuring premium, character-rich wood embedded in an ultra-clear epoxy river. Designed to bring natural elegance and a striking contemporary edge to luxury residential or commercial lounge spaces.
+              Premium custom serving board crafted to showcase the beautiful interplay between rich, solid wood grains and artistically layered epoxy resin. Perfect as a high-end culinary presentation piece or an exclusive artisanal gift.
             </p>
           </div>
         </div>
 
-        <!-- PROIZVOD 2: HUNGRY HEARTS (Kategorija: Serving Boards) -->
-        <div class="wood-epoxy-card" id="boards">
-          <div class="we-gallery-block">
-            <div class="we-main-view">
-              <img id="img-hungry" src="assets/hungry_1.jpg" alt="Hungry Hearts Serving Board">
+        <div class="we-product-row" id="gin-epoxy">
+          <div class="we-gallery-side">
+            <div class="we-display-frame">
+              <img id="view-gin" src="assets/images/Epoxy&Gin/Epoxy&Gin4.jpg" alt="Gin & Epoxy Coffee Table">
             </div>
-            <div class="we-thumbs-holder">
-              <div class="we-thumb-box active" onclick="switchWeImage('img-hungry', 'assets/hungry_1.jpg', this)">
-                <img src="assets/hungry_1.jpg" alt="Hungry Hearts view 1">
+            <div class="we-thumbnails-grid">
+              <div class="we-thumb active" onclick="changeWeImage('view-gin', 'assets/images/Epoxy&Gin/Epoxy&Gin4.jpg', this)">
+                <img src="assets/images/Epoxy&Gin/Epoxy&Gin4.jpg" alt="View 1">
               </div>
-              <div class="we-thumb-box" onclick="switchWeImage('img-hungry', 'assets/hungry_2.jpg', this)">
-                <img src="assets/hungry_2.jpg" alt="Hungry Hearts view 2">
+              <div class="we-thumb" onclick="changeWeImage('view-gin', 'assets/images/Epoxy&Gin/Epoxy&Gin5.jpeg', this)">
+                <img src="assets/images/Epoxy&Gin/Epoxy&Gin5.jpeg" alt="View 2">
               </div>
-              <div class="we-thumb-box" onclick="switchWeImage('img-hungry', 'assets/hungry_3.jpg', this)">
-                <img src="assets/hungry_3.jpg" alt="Hungry Hearts view 3">
+              <div class="we-thumb" onclick="changeWeImage('view-gin', 'assets/images/Epoxy&Gin/Epoxy&Gin6.jpg', this)">
+                <img src="assets/images/Epoxy&Gin/Epoxy&Gin6.jpg" alt="View 3">
               </div>
             </div>
           </div>
-          <div class="we-details-block">
-            <span class="we-badge">Serving Board</span>
-            <h3>Hungry Hearts</h3>
+          <div class="we-info-side">
+            <span class="we-category-tag">Coffee Table</span>
+            <h3>Gin & Epoxy</h3>
             <p>
-              An elite wooden serving board seamlessly bound with artistic resin layers. Engineered to serve as a high-end culinary presentation piece or a statement gift, blending everyday utility with fine art.
+              An elegant small river table combining character-rich timber slabs with crystal-clear resin fills. Meticulously designed to elevate sophisticated living spaces, bringing modern transparency and a luxurious touch to your home interior.
             </p>
           </div>
         </div>
@@ -82,7 +99,6 @@
       </div>
     </section>
 
-    <!-- CUSTOM ORDERS -->
     <section id="custom" style="padding: 60px 0 40px 0; margin-top: 40px;">
       <h2 style="border-bottom: 2px solid var(--accent-gold); padding-bottom: 10px;">Custom Orders</h2>
       <p style="margin-top: 20px;">
@@ -92,25 +108,23 @@
   </main>
 
   <footer><p>&copy; 2026 BOREA GRGIĆ. All rights reserved.</p></footer>
-
   <script src="js/main.js"></script>
   <script src="js/navigacija.js"></script>
 
-  <!-- Izolirana skripta za rad galerija na klik -->
   <script>
-    function switchWeImage(mainImgId, newSrc, clickedThumb) {
-      // Promijeni sliku u glavnom prikazu te kartice
-      document.getElementById(mainImgId).src = newSrc;
+    function changeWeImage(mainViewId, imagePath, clickedElement) {
+      document.getElementById(mainViewId).src = imagePath;
       
-      // Resetiraj aktivno stanje samo unutar ove galerije
-      const parentHolder = clickedThumb.parentElement;
-      const siblings = parentHolder.getElementsByClassName('we-thumb-box');
-      for (let thumb of siblings) {
-        thumb.classList.remove('active');
+      // Makni 'active' okvir sa svih thumbova unutar iste sekcije
+      const parentGrid = clickedElement.parentElement;
+      const thumbs = parentGrid.getElementsByClassName('we-thumb');
+      for (let i = 0; i < thumbs.length; i++) {
+        thumbs[i].classList.remove('active');
       }
       
-      // Postavi kliknutu sličicu kao aktivnu
-      clickedThumb.classList.add('active');
+      // Dodaj aktivni okvir kliknutom elementu
+      clickedElement.classList.add('active');
     }
   </script>
-</body></html>
+</body>
+</html>

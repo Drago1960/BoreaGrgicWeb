@@ -15,9 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 <li>
                     <a href="wood-epoxy.html">Wood & Epoxy</a>
                     <ul class="dropdown-menu">
-                        <li><a href="wood-epoxy.html#tables">Coffee Tables</a></li>
-                        <li><a href="wood-epoxy.html#boards">Serving Boards</a></li>
-                        <li><a href="wood-epoxy.html#custom">Custom Orders</a></li>
+                        <li><a href="wood-epoxy.html#products">Products</a></li>
+                        <li><a href="wood-epoxy.html#hungry-hearts">Hungry Hearts</a></li>
+                        <li><a href="wood-epoxy.html#gin-epoxy">Gin & Epoxy</a></li>
+                        <li><a href="wood-epoxy.html#custom">Custom</a></li>
                     </ul>
                 </li>
                 <li>
