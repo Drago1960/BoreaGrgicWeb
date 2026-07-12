@@ -16,17 +16,10 @@
   <!-- 1. UKLJUČIVANJE SLUŽBENE PADDLE JS SKRIPTE -->
   <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
   <script>
-    // Postavljanje sandbox okruženja za testiranje
     Paddle.Environment.set("sandbox");
 
-    // Inicijalizacija s tvojim klijentskim testnim tokenom i eksplicitno dopuštenom domenom
     Paddle.Initialize({
-      token: "test_593f9264a4b5dd9e12a8d74bb80",
-      checkout: {
-        settings: {
-          allowedDomains: ["boreagrgic.github.io"]
-        }
-      }
+      token: "test_593f9264a4b5dd9e12a8d74bb80"
     });
   </script>
 </head><body>
