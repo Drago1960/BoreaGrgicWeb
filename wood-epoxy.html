@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9T2H0MJBL7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -22,7 +21,6 @@
       <h2>Natural wood textures captured in high-quality resin</h2>
     </div>
 
-    <!-- PRODUCTS -->
     <section id="products" style="padding: 40px 0;">
       <h2 style="border-bottom: 2px solid var(--accent-gold); padding-bottom: 10px;">Our Products</h2>
       <div class="grid-3">
@@ -41,23 +39,48 @@
       </div>
     </section>
 
-    <!-- GALLERY -->
     <section id="gallery" style="padding: 60px 0 40px 0; margin-top: 40px;">
-      <h2 style="border-bottom: 2px solid var(--accent-gold); padding-bottom: 10px;">Gallery</h2>
-      <p style="margin-top: 20px; font-style: italic;">High-resolution showcases of our completed custom work will be available here soon.</p>
-    </section>
+      <h2 style="border-bottom: 2px solid var(--accent-gold); padding-bottom: 10px; margin-bottom: 40px;">Gallery</h2>
+      
+      <div class="software-layout" style="margin-bottom: 60px;">
+        <div class="gallery-holder">
+          <div class="main-view">
+            <img id="main-hungry-hearts" src="assets/images/HungryHearts/HungryHearts1.jpeg" alt="Hungry Hearts Serving Board">
+          </div>
+          <div class="thumbs-holder">
+            <div class="thumb-box" onclick="changeProductImage('main-hungry-hearts', 'assets/images/HungryHearts/HungryHearts1.jpeg')">
+              <img src="assets/images/HungryHearts/HungryHearts1.jpeg" alt="Hungry Hearts View 1">
+            </div>
+            <div class="thumb-box" onclick="changeProductImage('main-hungry-hearts', 'assets/images/HungryHearts/HungryHearts5.jpeg')">
+              <img src="assets/images/HungryHearts/HungryHearts5.jpeg" alt="Hungry Hearts View 2">
+            </div>
+            <div class="thumb-box" onclick="changeProductImage('main-hungry-hearts', 'assets/images/HungryHearts/HungryHearts6.jpeg')">
+              <img src="assets/images/HungryHearts/HungryHearts6.jpeg" alt="Hungry Hearts View 3">
+            </div>
+          </div>
+        </div>
+        
+        <div class="software-details">
+          <span style="font-size: 0.8rem; background: rgba(0, 0, 0, 0.05); padding: 4px 10px; border-radius:4px; font-weight:700;">SERVING BOARD</span>
+          <h3 style="margin: 15px 0 10px 0; font-size: 1.8rem;">Hungry Hearts</h3>
+          <p>An exclusive, hand-crafted serving board built to showcase the dynamic interplay between rich wood grain and dynamically designed epoxy fillings. Perfect as a premium present or a statement artifact.</p>
+        </div>
+      </div>
 
-    <!-- CUSTOM ORDERS -->
-    <section id="custom" style="padding: 60px 0 40px 0; margin-top: 40px;">
-      <h2 style="border-bottom: 2px solid var(--accent-gold); padding-bottom: 10px;">Custom Orders</h2>
-      <p style="margin-top: 20px;">
-        We specialize in crafting items tailored exactly to your dimensions, wood species preference, and color schemes. Bring us your vision, and we will bring it to life. Reach out to us via the contact section to discuss your custom project.
-      </p>
-    </section>
-  </main>
-
-  <footer><p>&copy; 2026 BOREA GRGIĆ. All rights reserved.</p></footer>
-  <script src="js/main.js"></script>
-  <script src="js/navigacija.js"></script>
-</body>
-</html>
+      <div class="software-layout">
+        <div class="gallery-holder">
+          <div class="main-view">
+            <img id="main-gin-epoxy" src="assets/images/Epoxy&Gin/Epoxy&Gin4.jpg" alt="Gin & Epoxy Coffee Table">
+          </div>
+          <div class="thumbs-holder">
+            <div class="thumb-box" onclick="changeProductImage('main-gin-epoxy', 'assets/images/Epoxy&Gin/Epoxy&Gin4.jpg')">
+              <img src="assets/images/Epoxy&Gin/Epoxy&Gin4.jpg" alt="Gin & Epoxy View 1">
+            </div>
+            <div class="thumb-box" onclick="changeProductImage('main-gin-epoxy', 'assets/images/Epoxy&Gin/Epoxy&Gin5.jpeg')">
+              <img src="assets/images/Epoxy&Gin/Epoxy&Gin5.jpeg" alt="Gin & Epoxy View 2">
+            </div>
+            <div class="thumb-box" onclick="changeProductImage('main-gin-epoxy', 'assets/images/Epoxy&Gin/Epoxy&Gin6.jpg')">
+              <img src="assets/images/Epoxy&Gin/Epoxy&Gin6.jpg" alt="Gin & Epoxy View 3">
+            </div>
+          </div>
+        </div>

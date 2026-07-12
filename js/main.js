@@ -1,12 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Mobilni hamburger meni
-    const menuToggle = document.getElementById('mobile-menu-toggle');
-    const navLinks = document.getElementById('nav-links-menu');
-
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+// Galerija slika za probexyz.html
+function changeImage(imageSrc) {
+    var mainImage = document.getElementById('main-software-img');
+    if (mainImage) {
+        mainImage.src = imageSrc;
     }
-});
-
+}
