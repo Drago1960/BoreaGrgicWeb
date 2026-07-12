@@ -21,8 +21,7 @@
     Paddle.Initialize({
       token: "test_593f9264a4b5dd9e12a8d74bb80"
     });
-  </script>
-</head><body>
+  </script></head><body>
 
   <main>
     <div class="page-header">
@@ -77,6 +76,15 @@
           <li style="margin-bottom: 5px;">Seamless mapping to custom macros and hardware buttons for streamlined operation.</li>
         </ul>
 
+        <!-- NOVO: Upute za slanje serijskog broja kontrolera (Strelice 1 i 2) -->
+        <div class="serial-instructions" style="margin-bottom: 25px; padding: 15px; border-left: 4px solid #D1B48C; background: rgba(0,0,0,0.01);">
+          <h4 style="margin: 0 0 8px 0; color: #001122;">How to obtain your lifetime license:</h4>
+          <p style="margin: 0 0 12px 0; font-size: 0.9rem; line-height: 1.4; color: #333;">
+            Please copy the entire content from the red field in your controller software and send it via our <a href="contact.html" style="color: #001122; font-weight: bold; text-decoration: underline;">contact form</a>. Your permanent lifetime license will be generated based on this unique key.
+          </p>
+          <img src="assets/Machine_key.png" alt="UCCNC Controller Serial Number Location" style="width: 100%; max-width: 350px; display: block; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        </div>
+
         <!-- Kartica za Download i Kupnju -->
         <div class="checkout-card" style="background: rgba(0,0,0,0.03); padding: 25px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08);">
 
@@ -84,9 +92,9 @@
           <div class="price-tag" style="font-size: 1.5rem; font-weight: bold; margin: 0 0 5px 0; color: #D1B48C;">
             19.99 EUR
           </div>
-          <!-- Prikaz bez uključenog poreza -->
+          <!-- Vraćeno: Prikaz s uključenim porezom -->
           <div style="font-size: 0.8rem; color: #666; margin-bottom: 5px;">
-            (VAT not included)
+            (VAT included)
           </div>
           <div style="font-size: 0.85rem; color: #444; font-style: italic; margin-bottom: 20px;">
             License is tied to the controller serial number.
@@ -101,7 +109,7 @@
             <a href="assets/download/ProbeXYZ_pack.zip" class="btn btn-outline" download style="display: block; text-align: center; padding: 12px; border: 2px solid #001122; color: #001122; text-decoration: none; font-weight: bold; border-radius: 4px; background: rgba(0, 17, 34, 0.03);">
               Download Fully Functional 30-Day Trial (.ZIP)
             </a>
-            <!-- Gumb za otvaranje PDF priručnika - POPRAVLJENI TAGOVI -->
+            <!-- Gumb za otvaranje PDF priručnika -->
             <a href="assets/download/Probe_XYZ_instructions_v1_EN.pdf" target="_blank" class="btn btn-text" style="display: block; text-align: center; padding: 10px; color: #001122; text-decoration: underline; font-weight: 500; font-size: 0.9rem;">
               Read User Manual (PDF)
             </a>
@@ -132,16 +140,12 @@
           theme: 'light',
           locale: 'en'
         },
-        // Vraćamo ispravno polje "items" koje server traži
         items: [
           {
-            priceId: 'pri_01kx9e005vss58j1sdgawnpxf9', // Tvoja nova ispravna cijena
+            priceId: 'pri_01kx9e005vss58j1sdgawnpxf9',
             quantity: 1
           }
         ]
       });
     }
-  </script>
-
-
-</body></html>
+  </script></body></html>
