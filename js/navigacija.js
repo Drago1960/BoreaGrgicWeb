@@ -1,12 +1,14 @@
-(function() {
-    var navHTML = `
+document.addEventListener("DOMContentLoaded", function () {
+  const navHTML = `
     <header>
         <nav>
             <div class="logo">
                 <a href="index.html"><img src="assets/logo.png" alt="Logo"></a>
             </div>
             <div class="menu-toggle" id="mobile-menu">
-                <span></span><span></span><span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
             <ul class="nav-links" id="nav-list">
                 <li><a href="index.html">Home</a></li>
@@ -28,18 +30,19 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-    </header>`;
+    </header>
+    `;
 
-    // Umetni navigaciju odmah, bez čekanja
-    document.body.insertAdjacentHTML('afterbegin', navHTML);
+  // Ubacivanje navigacije na sam početak body elementa
+  document.body.insertAdjacentHTML('afterbegin', navHTML);
 
-    // Hamburger logika
-    var menuToggle = document.getElementById('mobile-menu');
-    var navLinks = document.getElementById('nav-list');
-    
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-        });
-    }
-})();
+  // Mobilna skripta za hamburger klik
+  const menuToggle = document.getElementById('mobile-menu');
+  const navLinks = document.getElementById('nav-list');
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', function () {
+      navLinks.classList.toggle('active');
+    });
+  }
+});
