@@ -35,13 +35,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // Ubacivanje navigacije na sam početak body elementa
   document.body.insertAdjacentHTML('afterbegin', navHTML);
 
-  // Mobilna skripta za hamburger klik
   const menuToggle = document.getElementById('mobile-menu');
   const navLinks = document.getElementById('nav-list');
 
   if (menuToggle && navLinks) {
+    // Mobilna skripta za hamburger klik (otvaranje/zatvaranje)
     menuToggle.addEventListener('click', function () {
       navLinks.classList.toggle('active');
+    });
+
+    // NOVO: Zatvaranje menija nakon klika na bilo koji link unutar njega
+    const allLinks = navLinks.querySelectorAll('a');
+    allLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('active');
+      });
     });
   }
 });
