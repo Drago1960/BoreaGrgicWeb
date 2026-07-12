@@ -487,9 +487,7 @@ footer {
   main {
     margin-top: 130px;
   }
-  section[id] {
-    scroll-margin-top: 180px;
-  }
+  
   /* MOBILNI STYLOVI ZA ABOUT STRANICU */
   .about-profile, .about-profile.reversed {
     flex-direction: column; /* Slaže sliku pa tekst jedno ispod drugog */
@@ -507,5 +505,8 @@ footer {
   .profile-text p {
     text-align: left; /* Na mobitelu je opravdano poravnanje (justify) često ružno, 'left' je čitljivije */
     font-size: 1rem;
+  }
+  section[id] {
+    scroll-margin-top: 180px;
   }
 }
