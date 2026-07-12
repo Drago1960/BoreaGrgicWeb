@@ -249,3 +249,17 @@
         font-size: 1.6rem;
     }
 }
+/* Sprječava lom izgleda prilikom JS injectiona */
+.logo img {
+  max-width: 220px !important;
+  max-height: 110px !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 150px !important;
+    max-height: 75px !important;
+  }
+}
