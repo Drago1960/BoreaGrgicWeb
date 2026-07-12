@@ -17,13 +17,19 @@
   <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
   <script>
     // Postavljanje sandbox okruženja za testiranje
-    Paddle.Environment.set("sandbox"); 
-    
-    // Inicijalizacija s tvojim klijentskim testnim tokenom
-    Paddle.Initialize({ 
-      token: "test_593f9264a4b5dd9e12a8d74bb80" 
+    Paddle.Environment.set("sandbox");
+
+    // Inicijalizacija s tvojim klijentskim testnim tokenom i eksplicitno dopuštenom domenom
+    Paddle.Initialize({
+      token: "test_593f9264a4b5dd9e12a8d74bb80",
+      checkout: {
+        settings: {
+          allowedDomains: ["boreagrgic.github.io"]
+        }
+      }
     });
-  </script></head><body>
+  </script>
+</head><body>
 
   <main>
     <div class="page-header">
@@ -95,7 +101,7 @@
 
           <div class="btn-stack" style="display: flex; flex-direction: column; gap: 10px;">
             <!-- Gumb za Paddle -->
-            <button class="btn btn-solid paddle_button" data-price-id="pri_01gsz6v5ndg87esby4259bkrf7" style="width: 100%; padding: 12px; font-weight: bold; cursor: pointer;">
+            <button class="btn btn-solid" onclick="otvoriPaddleSustav()" style="width: 100%; padding: 12px; font-weight: bold; cursor: pointer;">
               Buy License (Paddle)
             </button>
             <!-- Istaknuti gumb za 30-dnevni trial paket -->
@@ -125,7 +131,24 @@
   <!-- Učitavanje vanjskih skripti -->
   <script src="js/main.js"></script>
   <script src="js/navigacija.js"></script>
+  <script>
+    function otvoriPaddleSustav() {
+      Paddle.Checkout.open({
+        settings: {
+          displayMode: 'overlay',
+          theme: 'light',
+          locale: 'en',
+          variant: 'one-page'
+        },
+        items: [
+          {
+            priceId: 'pri_01kx9e005vss58j1sdgawnpxf9', // Tvoj ID cijene
+            quantity: 1
+          }
+        ]
+      });
+    }
+  </script>
 
-  
 
 </body></html>
