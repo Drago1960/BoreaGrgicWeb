@@ -41,7 +41,7 @@
 
     <section id="gallery" style="padding: 60px 0 40px 0; margin-top: 40px;">
       <h2 style="border-bottom: 2px solid var(--accent-gold); padding-bottom: 10px; margin-bottom: 40px;">Gallery</h2>
-      
+
       <div class="we-products-container">
 
         <div class="we-product-row" id="hungry-hearts">
@@ -113,16 +113,18 @@
 
   <script>
     function changeWeImage(mainViewId, imagePath, clickedElement) {
-      document.getElementById(mainViewId).src = imagePath;
-      
-      // Makni 'active' okvir sa svih thumbova unutar iste sekcije
-      const parentGrid = clickedElement.parentElement;
-      const thumbs = parentGrid.getElementsByClassName('we-thumb');
-      for (let i = 0; i < thumbs.length; i++) {
-        thumbs[i].classList.remove('active');
+      var mainImg = document.getElementById(mainViewId);
+      if (mainImg) {
+        mainImg.src = imagePath;
       }
-      
-      // Dodaj aktivni okvir kliknutom elementu
+
+      var parentGrid = clickedElement.parentElement;
+      if (parentGrid) {
+        var thumbs = parentGrid.getElementsByClassName('we-thumb');
+        for (var i = 0; i < thumbs.length; i++) {
+          thumbs[i].classList.remove('active');
+        }
+      }
       clickedElement.classList.add('active');
     }
   </script>
