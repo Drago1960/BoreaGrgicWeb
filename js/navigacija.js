@@ -6,9 +6,7 @@
                 <a href="index.html"><img src="assets/logo.png" alt="Logo"></a>
             </div>
             <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
             <ul class="nav-links" id="nav-list">
                 <li><a href="index.html">Home</a></li>
@@ -32,10 +30,13 @@
         </nav>
     </header>`;
 
+    // Umetni navigaciju odmah, bez čekanja
     document.body.insertAdjacentHTML('afterbegin', navHTML);
 
+    // Hamburger logika
     var menuToggle = document.getElementById('mobile-menu');
     var navLinks = document.getElementById('nav-list');
+    
     if (menuToggle && navLinks) {
         menuToggle.addEventListener('click', function() {
             navLinks.classList.toggle('active');
