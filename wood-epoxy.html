@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9T2H0MJBL7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,72 +16,108 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <main>
     <div class="page-header">
       <h1>Wood & Epoxy</h1>
       <h2>Natural wood textures captured in high-quality resin</h2>
     </div>
 
-    <section id="products" style="padding: 40px 0;">
-      <h2 style="border-bottom: 2px solid var(--accent-gold); padding-bottom: 10px;">Our Products</h2>
-      <div class="grid-3">
-        <div class="card">
-          <h3>Coffee Tables</h3>
-          <p>Unique river designs tailored to complement modern interiors and living spaces.</p>
+    <!-- 1. PROIZVOD: HUNGRY HEARTS -->
+    <section id="hungryhearts" style="padding: 60px 0; border-bottom: 1px solid rgba(0,0,0,0.1);">
+      <div class="software-layout">
+        
+        <!-- LIJEVI STUPAC: Galerija za Hungry Hearts -->
+        <div class="gallery-holder">
+          <div class="main-view">
+            <img id="main-hungry-img" src="assets/images/HungryHearts/HungryHearts1.jpeg" alt="Hungry Hearts Serving Board">
+          </div>
+          <div class="thumbs-holder">
+            <div class="thumb-box" onclick="changeHungryImage('assets/images/HungryHearts/HungryHearts1.jpeg')">
+              <img src="assets/images/HungryHearts/HungryHearts1.jpeg" alt="Hungry Hearts 1">
+            </div>
+            <div class="thumb-box" onclick="changeHungryImage('assets/images/HungryHearts/HungryHearts5.jpeg')">
+              <img src="assets/images/HungryHearts/HungryHearts5.jpeg" alt="Hungry Hearts 5">
+            </div>
+            <div class="thumb-box" onclick="changeHungryImage('assets/images/HungryHearts/HungryHearts6.jpeg')">
+              <img src="assets/images/HungryHearts/HungryHearts6.jpeg" alt="Hungry Hearts 6">
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Wall Art & Reliefs</h3>
-          <p>A striking combination of precision CNC wood carving and vibrant epoxy fills.</p>
+
+        <!-- DESNI STUPAC: Opis proizvoda -->
+        <div class="software-details">
+          <span style="font-size: 0.8rem; background: rgba(0, 0, 0, 0.05); padding: 4px 10px; border-radius:4px; font-weight:700;">SERVING BOARD</span>
+          <h2 style="margin: 10px 0 20px 0; color: #001122;">"Hungry Hearts"</h2>
+          <p style="margin-bottom: 20px;">
+            Premium small-scale custom piece, ideal for luxury gifts and statement tableware. Designed with precision and finished to accentuate the beautiful contrast between rich wood grains and elegant resin.
+          </p>
+          <h4 style="margin-bottom: 10px;">Product Highlights:</h4>
+          <ul style="margin-bottom: 30px; padding-left: 20px; list-style-type: square;">
+            <li style="margin-bottom: 5px;">Hand-selected premium wood with vibrant natural patterns.</li>
+            <li style="margin-bottom: 5px;">Food-safe coating for everyday serving and protection.</li>
+            <li style="margin-bottom: 5px;">An exquisite, high-end gift for special occasions.</li>
+          </ul>
         </div>
-        <div class="card">
-          <h3>Serving Boards</h3>
-          <p>Premium small-scale custom pieces, ideal for luxury gifts and statement tableware.</p>
-        </div>
+
       </div>
     </section>
 
-    <section id="gallery" style="padding: 60px 0 40px 0; margin-top: 40px;">
-      <h2 style="border-bottom: 2px solid var(--accent-gold); padding-bottom: 10px; margin-bottom: 40px;">Gallery</h2>
-      
-      <div class="software-layout" style="margin-bottom: 60px;">
-        <div class="gallery-holder">
-          <div class="main-view">
-            <img id="main-hungry-hearts" src="assets/images/HungryHearts/HungryHearts1.jpeg" alt="Hungry Hearts Serving Board">
-          </div>
-          <div class="thumbs-holder">
-            <div class="thumb-box" onclick="changeProductImage('main-hungry-hearts', 'assets/images/HungryHearts/HungryHearts1.jpeg')">
-              <img src="assets/images/HungryHearts/HungryHearts1.jpeg" alt="Hungry Hearts View 1">
-            </div>
-            <div class="thumb-box" onclick="changeProductImage('main-hungry-hearts', 'assets/images/HungryHearts/HungryHearts5.jpeg')">
-              <img src="assets/images/HungryHearts/HungryHearts5.jpeg" alt="Hungry Hearts View 2">
-            </div>
-            <div class="thumb-box" onclick="changeProductImage('main-hungry-hearts', 'assets/images/HungryHearts/HungryHearts6.jpeg')">
-              <img src="assets/images/HungryHearts/HungryHearts6.jpeg" alt="Hungry Hearts View 3">
-            </div>
-          </div>
-        </div>
-        
-        <div class="software-details">
-          <span style="font-size: 0.8rem; background: rgba(0, 0, 0, 0.05); padding: 4px 10px; border-radius:4px; font-weight:700;">SERVING BOARD</span>
-          <h3 style="margin: 15px 0 10px 0; font-size: 1.8rem;">Hungry Hearts</h3>
-          <p>An exclusive, hand-crafted serving board built to showcase the dynamic interplay between rich wood grain and dynamically designed epoxy fillings. Perfect as a premium present or a statement artifact.</p>
-        </div>
-      </div>
-
+    <!-- 2. PROIZVOD: GIN & EPOXY -->
+    <section id="gin-epoxy" style="padding: 60px 0;">
       <div class="software-layout">
+        
+        <!-- LIJEVI STUPAC: Galerija za Gin & Epoxy -->
         <div class="gallery-holder">
           <div class="main-view">
-            <img id="main-gin-epoxy" src="assets/images/Epoxy&Gin/Epoxy&Gin4.jpg" alt="Gin & Epoxy Coffee Table">
+            <img id="main-gin-img" src="assets/images/Epoxy&Gin/Epoxy&Gin4.jpg" alt="Gin & Epoxy Coffee Table">
           </div>
           <div class="thumbs-holder">
-            <div class="thumb-box" onclick="changeProductImage('main-gin-epoxy', 'assets/images/Epoxy&Gin/Epoxy&Gin4.jpg')">
-              <img src="assets/images/Epoxy&Gin/Epoxy&Gin4.jpg" alt="Gin & Epoxy View 1">
+            <div class="thumb-box" onclick="changeGinImage('assets/images/Epoxy&Gin/Epoxy&Gin4.jpg')">
+              <img src="assets/images/Epoxy&Gin/Epoxy&Gin4.jpg" alt="Gin & Epoxy 4">
             </div>
-            <div class="thumb-box" onclick="changeProductImage('main-gin-epoxy', 'assets/images/Epoxy&Gin/Epoxy&Gin5.jpeg')">
-              <img src="assets/images/Epoxy&Gin/Epoxy&Gin5.jpeg" alt="Gin & Epoxy View 2">
+            <div class="thumb-box" onclick="changeGinImage('assets/images/Epoxy&Gin/Epoxy&Gin5.jpeg')">
+              <img src="assets/images/Epoxy&Gin/Epoxy&Gin5.jpeg" alt="Gin & Epoxy 5">
             </div>
-            <div class="thumb-box" onclick="changeProductImage('main-gin-epoxy', 'assets/images/Epoxy&Gin/Epoxy&Gin6.jpg')">
-              <img src="assets/images/Epoxy&Gin/Epoxy&Gin6.jpg" alt="Gin & Epoxy View 3">
+            <div class="thumb-box" onclick="changeGinImage('assets/images/Epoxy&Gin/Epoxy&Gin6.jpg')">
+              <img src="assets/images/Epoxy&Gin/Epoxy&Gin6.jpg" alt="Gin & Epoxy 6">
             </div>
           </div>
         </div>
+
+        <!-- DESNI STUPAC: Opis proizvoda -->
+        <div class="software-details">
+          <span style="font-size: 0.8rem; background: rgba(0, 0, 0, 0.05); padding: 4px 10px; border-radius:4px; font-weight:700;">COFFEE TABLE</span>
+          <h2 style="margin: 10px 0 20px 0; color: #001122;">"Gin & Epoxy"</h2>
+          <p style="margin-bottom: 20px;">
+            Unique river designs tailored to complement modern interiors and living spaces. Captured in high-quality, crystal-clear resin, this piece brings a deep natural aesthetic directly into your home.
+          </p>
+          <h4 style="margin-bottom: 10px;">Product Highlights:</h4>
+          <ul style="margin-bottom: 30px; padding-left: 20px; list-style-type: square;">
+            <li style="margin-bottom: 5px;">Stunning deep river design featuring high-clarity casting resin.</li>
+            <li style="margin-bottom: 5px;">Durable, scratch-resistant surface engineered for longevity.</li>
+            <li style="margin-bottom: 5px;">Custom steel or wooden structural legs tailored to your space.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer><p>&copy; 2026 BOREA GRGIĆ. All rights reserved.</p></footer>
+
+  <!-- Nezavisne skripte za kontrolu galerija bez međusobnog miješanja slika -->
+  <script>
+    function changeHungryImage(imageSrc) {
+      document.getElementById('main-hungry-img').src = imageSrc;
+    }
+    function changeGinImage(imageSrc) {
+      document.getElementById('main-gin-img').src = imageSrc;
+    }
+  </script>
+
+  <!-- Učitavanje vanjskih skripti -->
+  <script src="js/main.js"></script>
+  <script src="js/navigacija.js"></script>
+</body>
+</html>

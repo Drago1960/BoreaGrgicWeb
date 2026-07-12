@@ -16,8 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <a href="wood-epoxy.html">Wood & Epoxy</a>
                     <ul class="dropdown-menu">
                         <li><a href="wood-epoxy.html#hungryhearts">Hungry Hearts</a></li>
-                        <li><a href="wood-epoxy.html#gin&epoxy">Gin & Epoxy</a></li>
-                        
+                        <li><a href="wood-epoxy.html#gin-epoxy">Gin & Epoxy</a></li>
                     </ul>
                 </li>
                 <li>
